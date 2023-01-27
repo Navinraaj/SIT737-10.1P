@@ -1,7 +1,6 @@
 var express = require("express")
 var app = express()
 var cors = require('cors')
-let projectCollection; 
 let dbConnect = require("./dbConnect");
 let projectRoutes = require("./routes/projectRoutes"); 
 
@@ -20,6 +19,21 @@ app.get('/addTwoNumbers/:firstNumber/:secondNumber', function(req,res,next){
     }
     else { res.json({result: result, statusCode: 200}).status(200) } 
   })
+  
+let projectCollection; 
+let http = require('http').createServer(app);
+let io = require('socket.io')(http);
+
+
+  io.on('connection', (socket) => {
+    console.log('a user connected');
+    socket.on('disconnect', () => {
+      console.log('user disconnected');
+    });
+    setInterval(()=>{
+      socket.emit('number', parseInt(Math.random()*10));
+    }, 1000);
+  });
 /*
 //mongodb Connection
 const MongoClient = require('mongodb').MongoClient;
@@ -74,8 +88,8 @@ app.get('/api/projects',(req,res) => {
         })
         
      */   
-        var port = process.env.port || 8080;
-        app.listen(port,()=>{
+        var port = process.env.port || 3000;
+        http.listen(port,()=>{
                 console.log("App listening to: http://localhost:"+port)
                 //createColllection('Homeless People')
         })
