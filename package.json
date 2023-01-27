@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/Navinraaj/sit725-2022-t3-prac6/issues"
   },
-  "homepage": "https://github.com/Navinraaj/sit725-2022-t3-prac5#readme",
+  "homepage": "https://github.com/Navinraaj/sit725-2022-t3-prac6#readme",
   "dependencies": {
     "chai": "^4.3.7",
     "cors": "^2.8.5",
