@@ -1,7 +1,7 @@
 {
-  "name": "sit725-2022-t3-prac7",
+  "name": "sit725-2022-t3-prac9",
   "version": "1.0.0",
-  "description": "SIT725 Week7",
+  "description": "SIT725 Week9",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Navinraaj/sit725-2022-t3-prac7.git"
+    "url": "git+https://github.com/Navinraaj/sit725-2022-t3-prac9.git"
   },
   "keywords": [
     "Express",
@@ -18,9 +18,9 @@
   "author": "Navin Raaj",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Navinraaj/sit725-2022-t3-prac7/issues"
+    "url": "https://github.com/Navinraaj/sit725-2022-t3-prac9/issues"
   },
-  "homepage": "https://github.com/Navinraaj/sit725-2022-t3-prac7#readme",
+  "homepage": "https://github.com/Navinraaj/sit725-2022-t3-prac9#readme",
   "dependencies": {
     "chai": "^4.3.7",
     "cors": "^2.8.5",
