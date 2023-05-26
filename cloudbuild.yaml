@@ -22,15 +22,11 @@ steps:
         "--project",
         "sit737-23t1-manivannan-0f81f95",
       ]
-  - name: "gcr.io/cloud-builders/kubectl"
-    args:
-      [
-        "set",
-        "image",
-        "deployment/my-webapp",
-        "my-webapp=gcr.io/sit737-23t1-manivannan-0f81f95/my-webapp:$COMMIT_SHA",
-      ]
-    env:
-      - "KUBECTL_VERSION=1.25"
+  - name: 'gcr.io/cloud-builders/kubectl'
+    args: ['set', 'image', 'deployment/my-webapp', 'my-webapp=gcr.io/sit737-23t1-manivannan-0f81f95/my-webapp:$COMMIT_SHA']
+  env:
+    - 'KUBECTL_VERSION=1.25'
+    - 'CLOUDSDK_CONTAINER_CLUSTER=hello-cluster'
+    - 'CLOUDSDK_COMPUTE_REGION=australia-southeast1'
 images:
   - "gcr.io/sit737-23t1-manivannan-0f81f95/my-webapp:$COMMIT_SHA"
