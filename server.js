@@ -88,7 +88,7 @@ app.get('/api/projects',(req,res) => {
         })
         
      */   
-        var port = process.env.port || 3000;
+        var port = process.env.port || 8080;
         http.listen(port,()=>{
                 console.log("App listening to: http://localhost:"+port)
                 //createColllection('Homeless People')
